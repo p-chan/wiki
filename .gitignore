@@ -1,0 +1,11 @@
+# cache
+.cache
+
+# dependencies
+node_modules
+
+# logs
+*.log
+
+# output
+dist
