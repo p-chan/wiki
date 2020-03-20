@@ -1,3 +1,4 @@
 import * as React from 'react'
+import { MarkdownEditorComponent } from '../components'
 
-export const IndexComponent = () => <div>インデックス</div>
+export const IndexComponent = () => <MarkdownEditorComponent />
