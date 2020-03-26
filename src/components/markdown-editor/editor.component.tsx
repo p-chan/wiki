@@ -4,22 +4,22 @@ import CodeMirror from 'codemirror'
 
 import './codemirror'
 
-export const EditorComponent = () => {
-  const [valueState, setValueState] = React.useState('')
+type Props = {
+  value: string
+  handleBeforeChange: (value: string) => void
+  handleSave: () => void
+}
 
-  const onSave = React.useCallback(() => {
-    console.log('saved')
-  }, [])
-
+export const EditorComponent: React.FC<Props> = (props: Props) => {
   React.useEffect(() => {
     // @ts-ignore
-    CodeMirror.commands.save = onSave
+    CodeMirror.commands.save = props.handleSave
   }, [])
 
   return (
     <div>
       <ReactCodeMirror
-        value={valueState}
+        value={props.value}
         options={{
           mode: 'gfm',
           theme: 'one-dark',
@@ -40,7 +40,7 @@ export const EditorComponent = () => {
           console.log('mounted')
         }}
         onBeforeChange={(editor, data, value) => {
-          setValueState(value)
+          props.handleBeforeChange(value)
         }}
       />
     </div>
