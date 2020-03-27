@@ -13,6 +13,7 @@
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html",
     "clean": "rimraf ./dist ./.cache",
+    "typed": "tcm ./src",
     "format": "prettier --write \"./src/**/*\""
   },
   "dependencies": {
@@ -34,9 +35,12 @@
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@types/react-router-dom": "^5.1.3",
+    "autoprefixer": "^9.7.5",
     "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
+    "typed-css-modules": "^0.6.3",
     "typescript": "^3.8.3"
   },
   "private": true

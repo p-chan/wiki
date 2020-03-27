@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { Controlled as ReactCodeMirror } from 'react-codemirror2'
 import CodeMirror from 'codemirror'
+import styles from './editor.css'
 
 import './codemirror'
 
 type Props = {
+  wrapperClassName?: string
   value: string
   handleBeforeChange: (value: string) => void
   handleSave: () => void
@@ -17,8 +19,9 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
   }, [])
 
   return (
-    <div>
+    <div className={props.wrapperClassName}>
       <ReactCodeMirror
+        className={styles.editor}
         value={props.value}
         options={{
           mode: 'gfm',

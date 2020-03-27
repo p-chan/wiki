@@ -1,9 +1,11 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import 'ress'
 import { IndexComponent, AboutComponent } from './pages'
 import { firebase } from './utilities'
+
+import 'ress'
+import './app.css'
 
 const Component = () => {
   const [isLoadingUserState, setIsLoadingUserState] = React.useState(true)
