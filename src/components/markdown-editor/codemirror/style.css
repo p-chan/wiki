@@ -1,3 +1,27 @@
-.CodeMirror-linenumbers {
+:global .CodeMirror {
+  width: 100%;
+  height: 100%;
+  font-family: 'source han code jp';
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+:global .CodeMirror-linenumber {
   min-width: calc(3em - 8px);
+}
+
+:global .CodeMirror .cm-link {
+  color: var(--one-dark-blue);
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+:global .CodeMirror .cm-url {
+  color: var(--one-dark-magenta);
+  text-decoration: underline;
+}
+
+:global .CodeMirror .CodeMirror-matchingbracket {
+  border-bottom-width: 1px;
 }
