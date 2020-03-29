@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { EditorComponent, PreviewComponent } from './markdown-editor'
+import { EditorComponent, PreviewComponent } from './markdown-editor/index'
 
 import styles from './markdown-editor.css'
 
