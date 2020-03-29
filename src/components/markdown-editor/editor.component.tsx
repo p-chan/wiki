@@ -24,15 +24,19 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
         className={styles.editor}
         value={props.value}
         options={{
-          mode: 'gfm',
+          mode: {
+            name: 'yaml-frontmatter',
+            base: 'gfm'
+          },
           theme: 'one-dark',
           tabSize: 2,
           keyMap: 'sublime',
           extraKeys: {
             Enter: 'newlineAndIndentContinueMarkdownList'
           },
+          lineWrapping: true,
           lineNumbers: true,
-          scrollbarStyle: 'overlay',
+          scrollbarStyle: 'native',
           autofocus: true,
           matchBrackets: true,
           autoCloseBrackets: true,

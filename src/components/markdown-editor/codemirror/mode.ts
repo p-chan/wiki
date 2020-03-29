@@ -34,6 +34,7 @@ import 'codemirror/mode/xml/xml'
 
 // yaml, yml
 import 'codemirror/mode/yaml/yaml'
+import 'codemirror/mode/yaml-frontmatter/yaml-frontmatter'
 
 // toml
 import 'codemirror/mode/toml/toml'
