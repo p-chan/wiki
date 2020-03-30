@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { markdown } from '../../utilities'
+import classnames from 'classnames'
+
+import styles from './preview.css'
 
 type Props = {
   wrapperClassName?: string
@@ -11,7 +14,7 @@ export const PreviewComponent: React.FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={props.wrapperClassName}
+      className={classnames(styles.wrapper, props.wrapperClassName)}
       dangerouslySetInnerHTML={{
         __html: html
       }}

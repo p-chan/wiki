@@ -17,6 +17,7 @@
     "format": "prettier --write \"./src/**/*\""
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "codemirror": "^5.52.0",
     "codemirror-one-dark-theme": "^1.1.1",
     "firebase": "^7.11.0",
@@ -31,6 +32,7 @@
     "unified": "^8.4.2"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/codemirror": "0.0.88",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
