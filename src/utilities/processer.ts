@@ -6,9 +6,16 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 // @ts-ignore
 import remarkBreaks from 'remark-breaks'
+// @ts-ignore
+import remarkFrontmatter from 'remark-frontmatter'
 
-export const markdown = unified()
+export const processer = unified()
+  // Markdown to mdast
   .use(remarkParse)
   .use(remarkBreaks)
+  // mdast to hast
   .use(remarkRehype)
+  // hast to HTML
   .use(rehypeStringify)
+  // Frontmatter
+  .use(remarkFrontmatter)
