@@ -16,7 +16,7 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
   React.useEffect(() => {
     // @ts-ignore
     CodeMirror.commands.save = props.handleSave
-  }, [])
+  }, [props.value])
 
   return (
     <div className={props.wrapperClassName}>
@@ -43,7 +43,7 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
           autoCloseTags: true,
           styleActiveLine: true,
         }}
-        editorDidMount={() => {
+        editorDidMount={(editor) => {
           console.log('mounted')
         }}
         onBeforeChange={(editor, data, value) => {

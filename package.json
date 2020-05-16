@@ -38,6 +38,7 @@
     "@p-chan/prettier-config": "^2.0.0",
     "@types/classnames": "^2.2.10",
     "@types/codemirror": "0.0.88",
+    "@types/prettier": "^2.0.0",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@types/react-router-dom": "^5.1.3",

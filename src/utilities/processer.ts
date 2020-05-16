@@ -1,3 +1,4 @@
+import { Node } from 'unist'
 import unified from 'unified'
 import remarkParse from 'remark-parse'
 // @ts-ignore
@@ -19,3 +20,15 @@ export const processer = unified()
   .use(rehypeStringify)
   // Frontmatter
   .use(remarkFrontmatter)
+
+export const parse = (markdown: string) => {
+  return processer.parse(markdown)
+}
+
+export const runSync = (ast: Node) => {
+  return processer.runSync(ast)
+}
+
+export const stringify = (ast: Node) => {
+  return processer.stringify(ast)
+}
