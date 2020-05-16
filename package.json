@@ -14,13 +14,14 @@
     "build": "parcel build ./src/index.html",
     "clean": "rimraf ./dist ./.cache",
     "typed": "tcm ./src",
-    "format": "prettier --write \"./src/**/*\""
+    "format": "prettier --write \"./src/**/*.{html,css,js,jsx,ts,tsx,md}\""
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "codemirror": "^5.52.0",
     "codemirror-one-dark-theme": "^1.1.1",
     "firebase": "^7.11.0",
+    "prettier": "^2.0.5",
     "react": "^16.13.0",
     "react-codemirror2": "^7.0.0",
     "react-dom": "^16.13.0",
@@ -34,6 +35,7 @@
     "unified": "^8.4.2"
   },
   "devDependencies": {
+    "@p-chan/prettier-config": "^2.0.0",
     "@types/classnames": "^2.2.10",
     "@types/codemirror": "0.0.88",
     "@types/react": "^16.9.23",
@@ -42,7 +44,6 @@
     "autoprefixer": "^9.7.5",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.5.0",
-    "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "typed-css-modules": "^0.6.3",
     "typescript": "^3.8.3"

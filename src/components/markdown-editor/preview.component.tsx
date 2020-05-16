@@ -13,7 +13,7 @@ export const PreviewComponent: React.FC<Props> = (props: Props) => {
     <div
       className={classnames(styles.wrapper, props.wrapperClassName)}
       dangerouslySetInnerHTML={{
-        __html: props.value
+        __html: props.value,
       }}
     />
   )

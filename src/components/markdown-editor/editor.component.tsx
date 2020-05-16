@@ -26,13 +26,13 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
         options={{
           mode: {
             name: 'yaml-frontmatter',
-            base: 'gfm'
+            base: 'gfm',
           },
           theme: 'one-dark',
           tabSize: 2,
           keyMap: 'sublime',
           extraKeys: {
-            Enter: 'newlineAndIndentContinueMarkdownList'
+            Enter: 'newlineAndIndentContinueMarkdownList',
           },
           lineWrapping: true,
           lineNumbers: true,
@@ -41,7 +41,7 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
           matchBrackets: true,
           autoCloseBrackets: true,
           autoCloseTags: true,
-          styleActiveLine: true
+          styleActiveLine: true,
         }}
         editorDidMount={() => {
           console.log('mounted')

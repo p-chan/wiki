@@ -14,11 +14,11 @@ const Component = () => {
   const [userState, setUserState] = React.useState<firebase.User>()
 
   const onSubmitLoginForm = React.useCallback(
-    event => {
+    (event) => {
       firebase
         .auth()
         .signInWithEmailAndPassword(emailState, passwordState)
-        .catch(error => {
+        .catch((error) => {
           console.log(`${error.code} ${error.message}`)
         })
 
@@ -28,7 +28,7 @@ const Component = () => {
   )
 
   React.useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (isLoadingUserState) setIsLoadingUserState(false)
       if (user == undefined) return
 
@@ -46,7 +46,7 @@ const Component = () => {
           <input
             type="text"
             value={emailState}
-            onChange={event => setEmailState(event.currentTarget.value)}
+            onChange={(event) => setEmailState(event.currentTarget.value)}
           />
         </label>
         <label>
@@ -54,7 +54,7 @@ const Component = () => {
           <input
             type="password"
             value={passwordState}
-            onChange={event => setPasswordState(event.currentTarget.value)}
+            onChange={(event) => setPasswordState(event.currentTarget.value)}
           />
         </label>
         <input type="submit" value="ログイン" />
