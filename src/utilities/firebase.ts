@@ -14,4 +14,6 @@ firebase.initializeApp({
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 })
 
-export { firebase }
+const firestore = firebase.firestore()
+
+export { firebase, firestore }

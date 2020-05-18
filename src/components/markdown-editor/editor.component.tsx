@@ -8,6 +8,7 @@ import './codemirror'
 type Props = {
   wrapperClassName?: string
   value: string
+  isReadonly: boolean
   handleBeforeChange: (value: string) => void
   handleSave: () => void
 }
@@ -37,6 +38,7 @@ export const EditorComponent: React.FC<Props> = (props: Props) => {
           lineWrapping: true,
           lineNumbers: true,
           scrollbarStyle: 'native',
+          readOnly: props.isReadonly,
           autofocus: true,
           matchBrackets: true,
           autoCloseBrackets: true,

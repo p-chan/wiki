@@ -1,8 +1,10 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { IndexComponent, AboutComponent } from './pages'
+import { IndexComponent, AboutComponent, ItemsItemComponent } from './pages'
 import { firebase } from './utilities'
+
+import 'regenerator-runtime/runtime'
 
 import 'ress'
 import './app.css'
@@ -70,6 +72,9 @@ const Component = () => {
         </Route>
         <Route path="/about">
           <AboutComponent />
+        </Route>
+        <Route path="/items/:id">
+          <ItemsItemComponent />
         </Route>
       </Switch>
     </Router>
