@@ -1,8 +1,13 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { IndexComponent, AboutComponent } from './pages'
+import { IndexComponent, AboutComponent, ItemsItemComponent } from './pages'
 import { firebase } from './utilities'
+
+import 'regenerator-runtime/runtime'
+
+import 'ress'
+import './app.css'
 
 const Component = () => {
   const [isLoadingUserState, setIsLoadingUserState] = React.useState(true)
@@ -11,11 +16,11 @@ const Component = () => {
   const [userState, setUserState] = React.useState<firebase.User>()
 
   const onSubmitLoginForm = React.useCallback(
-    event => {
+    (event) => {
       firebase
         .auth()
         .signInWithEmailAndPassword(emailState, passwordState)
-        .catch(error => {
+        .catch((error) => {
           console.log(`${error.code} ${error.message}`)
         })
 
@@ -25,7 +30,7 @@ const Component = () => {
   )
 
   React.useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (isLoadingUserState) setIsLoadingUserState(false)
       if (user == undefined) return
 
@@ -43,7 +48,7 @@ const Component = () => {
           <input
             type="text"
             value={emailState}
-            onChange={event => setEmailState(event.currentTarget.value)}
+            onChange={(event) => setEmailState(event.currentTarget.value)}
           />
         </label>
         <label>
@@ -51,7 +56,7 @@ const Component = () => {
           <input
             type="password"
             value={passwordState}
-            onChange={event => setPasswordState(event.currentTarget.value)}
+            onChange={(event) => setPasswordState(event.currentTarget.value)}
           />
         </label>
         <input type="submit" value="ログイン" />
@@ -67,6 +72,9 @@ const Component = () => {
         </Route>
         <Route path="/about">
           <AboutComponent />
+        </Route>
+        <Route path="/items/:id">
+          <ItemsItemComponent />
         </Route>
       </Switch>
     </Router>

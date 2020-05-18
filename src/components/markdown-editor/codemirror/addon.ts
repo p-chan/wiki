@@ -1,0 +1,8 @@
+import 'codemirror/addon/edit/matchbrackets'
+import 'codemirror/addon/edit/closebrackets'
+import 'codemirror/addon/edit/closetag'
+import 'codemirror/addon/edit/continuelist'
+import 'codemirror/addon/comment/comment'
+import 'codemirror/addon/selection/active-line'
+import 'codemirror/addon/scroll/simplescrollbars'
+import 'codemirror/addon/scroll/simplescrollbars.css'

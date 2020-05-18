@@ -1,0 +1,128 @@
+.wrapper {
+  padding: 32px;
+  background-color: var(--one-dark-light-black);
+  color: var(--one-dark-white);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.wrapper a {
+  color: var(--one-dark-blue);
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+.wrapper h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.wrapper h2 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+.wrapper h3 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+.wrapper h4 {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.wrapper h5 {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.wrapper h6 {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.wrapper ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.wrapper ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.wrapper ol,
+.wrapper ul {
+  padding-left: 2em;
+  margin-top: 0;
+}
+
+.wrapper ul ul,
+.wrapper ol ul {
+  list-style-type: circle;
+}
+
+.wrapper ul ul,
+.wrapper ul ol,
+.wrapper ol ol,
+.wrapper ol ul {
+  margin: 0.2em 0 0.2em 2em;
+  padding-left: 1em;
+}
+
+.wrapper li {
+  margin-bottom: 0.2em;
+}
+
+.wrapper pre {
+  background-color: var(--one-dark-dark-black);
+  border-radius: 4px;
+}
+.wrapper code {
+  margin: 0 0.4rem;
+  color: var(--one-dark-light-yellow);
+  white-space: nowrap;
+}
+.wrapper pre > code {
+  display: block;
+  padding: 1em;
+  white-space: pre;
+}
+
+.wrapper table {
+  border-collapse: collapse;
+}
+
+.wrapper th,
+.wrapper td {
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
+.wrapper thead th,
+.wrapper thead td {
+  border-bottom: 1px solid var(--one-dark-white);
+}
+
+.wrapper tbody th,
+.wrapper tbody td {
+  border-bottom: 1px solid var(--one-dark-gutter-grey);
+}
+
+.wrapper pre,
+.wrapper blockquote,
+.wrapper table,
+.wrapper p,
+.wrapper ul,
+.wrapper ol {
+  margin-bottom: 2em;
+}
