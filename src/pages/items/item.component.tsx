@@ -11,8 +11,11 @@ export const ItemsItemComponent = () => {
 
   return (
     <div className={styles.wrapper}>
-      <HeaderComponent />
-      <MarkdownEditorComponent id={params.id} />
+      <HeaderComponent wrapperClassName={styles.header} />
+      <MarkdownEditorComponent
+        id={params.id}
+        wrapperClassName={styles.markdownEditor}
+      />
     </div>
   )
 }

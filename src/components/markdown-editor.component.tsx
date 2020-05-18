@@ -9,9 +9,11 @@ import prettier from 'prettier/standalone'
 import { ItemModel, createItemModel } from '../models'
 import styles from './markdown-editor.css'
 import mdast from 'mdast'
+import classnames from 'classnames'
 
 type Props = {
   id: string
+  wrapperClassName?: string
 }
 
 export const MarkdownEditorComponent = (props: Props) => {
@@ -92,7 +94,7 @@ export const MarkdownEditorComponent = (props: Props) => {
   }, [props.id, valueState])
 
   return (
-    <div className={styles.wrapper}>
+    <div className={classnames(styles.wrapper, props.wrapperClassName)}>
       <EditorComponent
         wrapperClassName={styles.editor}
         value={valueState}
