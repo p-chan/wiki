@@ -1,3 +1,38 @@
 .wrapper {
   display: block;
 }
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin-left: 20px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+}
+.item:first-child {
+  margin-left: 0;
+}
+.item:hover {
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.itemTitle {
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+}

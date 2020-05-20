@@ -30,7 +30,7 @@ export const HeaderComponent = (props: Props) => {
         <span className={styles.logoText}>Wiki</span>
       </Link>
       <button onClick={onClickNewButton} className={styles.button}>
-        新しい記事を作る
+        新しい知見をメモる
       </button>
     </div>
   )
