@@ -14,7 +14,8 @@
     "build": "parcel build ./src/index.html",
     "clean": "rimraf ./dist ./.cache",
     "typed": "tcm ./src",
-    "format": "prettier --write \"./src/**/*.{html,css,js,jsx,ts,tsx,md}\""
+    "format": "prettier --write \"./src/**/*.{html,css,js,jsx,ts,tsx,md}\"",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "classnames": "^2.2.6",
