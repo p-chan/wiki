@@ -39,15 +39,15 @@ export const TimelineComponent = (props: Props) => {
     itemsState.length !== 0 &&
     itemsState.map((item) => {
       return (
-        <Link to={`/items/${item.id}`} key={item.id}>
-          <div>{item.title}</div>
+        <Link to={`/items/${item.id}`} className={styles.item} key={item.id}>
+          <h1 className={styles.itemTitle}>{item.title}</h1>
         </Link>
       )
     })
 
   return (
     <div className={classnames(styles.wrapper, props.wrapperClassName)}>
-      <div>{itemsElementIfNeeded}</div>
+      <div className={styles.items}>{itemsElementIfNeeded}</div>
     </div>
   )
 }

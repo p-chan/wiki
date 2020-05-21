@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { TimelineComponent, HeaderComponent } from '../components'
+import { withApplication, TimelineComponent } from '../components'
+import styles from './index.css'
 
-export const IndexComponent = () => (
-  <div>
-    <HeaderComponent />
-    <TimelineComponent />
-  </div>
-)
+export const IndexComponent = () =>
+  withApplication(
+    <>
+      <TimelineComponent wrapperClassName={styles.wrapper} />
+    </>
+  )

@@ -9,6 +9,7 @@ export const ItemsItemComponent = () => {
     id: string
   }>()
 
+  // エディターの場合、レイアウトが特殊なので HOC で囲まない
   return (
     <div className={styles.wrapper}>
       <HeaderComponent wrapperClassName={styles.header} />
